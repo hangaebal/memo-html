@@ -9,40 +9,45 @@
 body {
 	font-family: "맑은 고딕", "Malgun Gothic", "돋움", dotum, sans-serif;
 	font-size: 9pt;
+	border: 1px solid #343434;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
 section { 
-	margin: 1px 0 0 1px;
-	background: #b9d1ea;
-	border-top: 1px solid #fff;
-	border-left: 1px solid #fff;
-	border-top-left-radius: 5px;
-	box-shadow: -1px -1px 0px #343434;
+	background: #bad2ea;
+	border: 1px solid #fff;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	padding: 9px;
 	
-	padding-left: 9px;
+	margin: 1px;
 }
 /* ========== header ==========*/
 header {
-	padding: 0;
-	height: 30px; 
+	height: 21px; 
 	position: relative;
 }
 #iconImg {
 	position: absolute;
-	top: 9px;
-	left: 0px
+	top: 0px;
+	left: 0px;
 }
 header p  {
 	margin: 0;
-	padding: 10px 0 0 21px;
-} 
-ul { padding: 0; }
-li { list-style: none; }
+	padding: 1px 0 0 21px;
+}
+
 /* ========== nav ========== */
 nav {
-	background: #d4d8e8;
-	height: 15px;
+	background: #d4dbed;
+	height: 18px;
 }
-.mainMenu { float: left; }
+#mainMenu li {
+	line-height: 18px;
+	float: left;
+	padding: 0 7px;
+}
+
 
 /* ========== article ========== */
 article { 
@@ -50,6 +55,11 @@ article {
 	
 	height: 500px;
 }
+/* article textarea {
+	width: 99%;
+	height: 99%;
+	resize: none;
+} */
 </style>
 </head>
 <body>
@@ -59,16 +69,16 @@ article {
 		<p>제목 없음 - 메모장</p>
 	</header>
 	<nav>
-		<ul>
-			<li class="mainMenu">파일</li>
-			<li class="mainMenu">편집</li>
-			<li class="mainMenu">서식</li>
-			<li class="mainMenu">보기</li>
-			<li class="mainMenu">도움말</li>
+		<ul id="mainMenu">
+			<li>파일(F)</li>
+			<li>편집(E)</li>
+			<li>서식(O)</li>
+			<li>보기(V)</li>
+			<li>도움말(H)</li>
 		</ul>	
 	</nav>
 	<article>
-	
+		<!-- <textarea></textarea> -->
 	</article>
 </section>
 </body>
