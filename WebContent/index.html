@@ -12,19 +12,20 @@ body {
 	border: 1px solid #343434;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
+	
+	cursor: default;
 }
 section { 
 	background: #bad2ea;
 	border: 1px solid #fff;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 	padding: 9px;
-	
-	margin: 1px;
+
 }
 /* ========== header ==========*/
 header {
-	height: 21px; 
+	height: 19px; 
 	position: relative;
 }
 #iconImg {
@@ -39,27 +40,61 @@ header p  {
 
 /* ========== nav ========== */
 nav {
-	background: #d4dbed;
-	height: 18px;
+	background: #dee3f3;
+	height: 16px;
+	border: 1px solid #f0f0f0;
+	border-bottom: 1px solid #b6bccc;
 }
-#mainMenu li {
-	line-height: 18px;
+#mainMenu > li {
+	line-height: 12px;
 	float: left;
-	padding: 0 7px;
+	padding: 0 6px;
+	border: 1px solid transparent;
+	height: 15px;
+	position: relative;
+}
+#mainMenu > li:hover {
+	border: 1px solid #b0b1b1;
+	border-radius: 3px;
+	background: #d8dcea;
 }
 
-
+.subMenuDiv {
+	border: 1px solid #979797; 
+	position: absolute;
+	top: 15px;
+	left: -2px;
+	background: #f0f0f0;
+	padding-left: 28px;
+	width: 224px;
+}
+.subMenu {
+	border-left: 1px solid #e2e3e3;
+	padding: 2px 0;
+}
+.subMenu li {
+	height: 22px;
+	line-height: 22px;
+	padding-left: 5px;
+	border-left: 1px solid #fff;
+}
+.subMenu .line {
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #fff;
+	height: 0;
+	margin: 5px 0;
+}
+.subMenu span {
+	float: right;
+	padding-right: 20px;
+}
 /* ========== article ========== */
 article { 
 	background: #fff;
 	
 	height: 500px;
 }
-/* article textarea {
-	width: 99%;
-	height: 99%;
-	resize: none;
-} */
+
 </style>
 </head>
 <body>
@@ -70,7 +105,21 @@ article {
 	</header>
 	<nav>
 		<ul id="mainMenu">
-			<li>파일(F)</li>
+			<li>파일(F)
+				<div class="subMenuDiv">
+					<ul class="subMenu">
+						<li>새로 만들기(N) <span>Ctrl+N</span></li>
+						<li>열기(O)... <span>Ctrl+O</span></li>
+						<li>저장(S) <span>Ctrl+S</span></li>
+						<li>다른 이름으로 저장(A)...</li>
+						<li class="line"></li>
+						<li>페이지 설정(U)...</li>
+						<li>인쇄(P)... <span>Ctrl+P</span></li>
+						<li class="line"></li>
+						<li>끝내기(X)</li>
+					</ul>				
+				</div>
+			</li>
 			<li>편집(E)</li>
 			<li>서식(O)</li>
 			<li>보기(V)</li>
@@ -78,7 +127,6 @@ article {
 		</ul>	
 	</nav>
 	<article>
-		<!-- <textarea></textarea> -->
 	</article>
 </section>
 </body>
