@@ -23,6 +23,7 @@ section {
 	padding: 9px;
 
 }
+
 /* ========== header ==========*/
 header {
 	height: 19px; 
@@ -60,6 +61,9 @@ nav {
 }
 
 .subMenuDiv {
+	
+}
+.subMenu {
 	border: 1px solid #979797;
 	background: #f0f0f0; 
 	position: absolute;
@@ -67,8 +71,7 @@ nav {
 	left: -2px;
 	padding-left: 28px;
 	white-space: nowrap;
-}
-.subMenu {
+
 	border-left: 1px solid #e2e3e3;
 	padding: 2px 0;
 }
@@ -98,6 +101,7 @@ nav {
 	position: absolute;
 	right: 20px;
 }
+
 /* ========== article ========== */
 article { 
 	background: #fff;
@@ -116,24 +120,17 @@ article {
 	<nav>
 		<ul id="mainMenu">
 			<li>파일(F)
-				
-				<div class="subMenuDiv">
-					<ul class="subMenu widthShortCut">
-						<li>
-							새로 만들기(N)
-							<span>Ctrl+N</span>
-						</li>
-						<li>열기(O)... <span>Ctrl+O</span></li>
-						<li>저장(S) <span>Ctrl+S</span></li>
-						<li>다른 이름으로 저장(A)...</li>
-						<li class="line"></li>
-						<li>페이지 설정(U)...</li>
-						<li>인쇄(P)... <span>Ctrl+P</span></li>
-						<li class="line"></li>
-						<li>끝내기(X)</li>
-					</ul>
-				</div>
-								
+				<ul class="subMenu widthShortCut">
+					<li>새로 만들기(N) <span>Ctrl+N</span></li>
+					<li>열기(O)... <span>Ctrl+O</span></li>
+					<li>저장(S) <span>Ctrl+S</span></li>
+					<li>다른 이름으로 저장(A)...</li>
+					<li class="line"></li>
+					<li>페이지 설정(U)...</li>
+					<li>인쇄(P)... <span>Ctrl+P</span></li>
+					<li class="line"></li>
+					<li>끝내기(X)</li>
+				</ul>				
 			</li>
 			<li>편집(E)</li>
 			<li>서식(O)
