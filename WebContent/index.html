@@ -40,18 +40,17 @@ header p  {
 }
 
 /* ========== nav ========== */
-nav {
+#mainMenu {
 	background: #dee3f3;
-	height: 16px;
+	height: 17px;
 	border: 1px solid #f0f0f0;
 	border-bottom: 1px solid #b6bccc;
 }
 #mainMenu > li {
-	line-height: 12px;
 	float: left;
+	height: 16px;
 	padding: 0 6px;
 	border: 1px solid transparent;
-	height: 15px;
 	position: relative;
 }
 #mainMenu > li:hover {
@@ -60,36 +59,35 @@ nav {
 	background: #d8dcea;
 }
 
-.subMenuDiv {
-	
-}
 .subMenu {
 	border: 1px solid #979797;
 	background: #f0f0f0; 
 	position: absolute;
-	top: 15px;
+	top: 17px;
 	left: -2px;
-	padding-left: 28px;
 	white-space: nowrap;
 
-	border-left: 1px solid #e2e3e3;
-	padding: 2px 0;
+	padding: 2px;
+	/* border-left: 1px solid #e2e3e3;
+	padding: 2px 0; */
 }
 .subMenu li {
-	height: 22px;
-	line-height: 22px;
-	padding-left: 5px;
-	border-left: 1px solid #fff;
+	border: 1px solid transparent;
 }
 .subMenu li:hover {
 	border: 1px solid #aecff7;
 	border-radius: 3px;
-	/* margin: -1px 3px -1px -23px;
-	padding-left: 28px; */
 }
-.subMenu.widthShortCut li {
-	padding-right: 88px;
+
+.subMenu li p {
+	height: 20px;
+	line-height: 20px;
+	padding: 0 55px 0 33px;
 }
+.subMenu.widthShortCut li p {
+	padding-right: 90px;
+}
+
 
 .subMenu .line {
 	border-top: 1px solid #e0e0e0;
@@ -121,16 +119,30 @@ article {
 		<ul id="mainMenu">
 			<li>파일(F)
 				<ul class="subMenu widthShortCut">
-					<li>새로 만들기(N) <span>Ctrl+N</span></li>
-					<li>열기(O)... <span>Ctrl+O</span></li>
-					<li>저장(S) <span>Ctrl+S</span></li>
-					<li>다른 이름으로 저장(A)...</li>
+					<li>
+						<p>새로 만들기(N) <span>Ctrl+N</span></p>
+					</li>
+					<li>
+						<p>열기(O)... <span>Ctrl+O</span></p>
+					</li>
+					<li>
+						<p>저장(S) <span>Ctrl+S</span></p>
+					</li>
+					<li>
+						<p>다른 이름으로 저장(A)...</p>
+					</li>
 					<li class="line"></li>
-					<li>페이지 설정(U)...</li>
-					<li>인쇄(P)... <span>Ctrl+P</span></li>
+					<li>
+						<p>페이지 설정(U)...</p>
+					</li>
+					<li>
+						<p>인쇄(P)... <span>Ctrl+P</span></p>
+					</li>
 					<li class="line"></li>
-					<li>끝내기(X)</li>
-				</ul>				
+					<li>
+						<p>끝내기(X)</p>
+					</li>
+				</ul>
 			</li>
 			<li>편집(E)</li>
 			<li>서식(O)
