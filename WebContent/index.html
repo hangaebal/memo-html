@@ -66,13 +66,18 @@ header p  {
 	top: 17px;
 	left: -2px;
 	white-space: nowrap;
-
 	padding: 2px;
-	/* border-left: 1px solid #e2e3e3;
-	padding: 2px 0; */
+	
+	display: none;
 }
+
+.displayNone {
+	display: none;
+}
+
 .subMenu li {
 	border: 1px solid transparent;
+	
 }
 .subMenu li:hover {
 	border: 1px solid #aecff7;
@@ -86,6 +91,7 @@ header p  {
 	border-left: 1px solid #e2e3e3;
 	border-right: 1px solid #fff;
 }
+
 
 .subMenu li p {
 	height: 20px;
@@ -115,8 +121,8 @@ article {
 	
 	height: 500px;
 }
-
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 <body>
 <section>
@@ -126,7 +132,8 @@ article {
 	</header>
 	<nav>
 		<ul id="mainMenu">
-			<li>파일(F)
+			<li>
+				<p>파일(F)</p>
 				<ul class="subMenu widthShortCut">
 					<li>
 						<p>새로 만들기(N) <span>Ctrl+N</span></p>
@@ -153,23 +160,81 @@ article {
 					</li>
 				</ul>
 			</li>
-			<li>편집(E)</li>
-			<li>서식(O)
-				<!-- <ul class="subMenu">
+			<li>
+				<p>편집(E)</p>
+				<ul class="subMenu widthShortCut">
+					<li>
+						<p>실행 취소(U) <span>Ctrl+Z</span></p>
+					</li>
+					<li class="line"></li>
+					<li>
+						<p>잘라내기(T) <span>Ctrl+X</span></p>
+					</li>
+					<li>
+						<p>복사(C) <span>Ctrl+C</span></p>
+					</li>
+					<li>
+						<p>붙여넣기(P) <span>Ctrl+V</span></p>
+					</li>
+					<li>
+						<p>삭제(L) <span>Del</span></p>
+					</li>
+					<li class="line"></li>
+					<li>
+						<p>찾기(F)... <span>Ctrl+F</span></p>
+					</li>
+					<li>
+						<p>다음 찾기(N) <span>F3</span></p>
+					</li>
+					<li>
+						<p>바꾸기(R)... <span>Ctrl+H</span></p>
+					</li>
+					<li>
+						<p>이동(G)... <span>Ctrl+A</span></p>
+					</li>
+					<li class="line"></li>
+					<li>
+						<p>모두 선택(A) <span>Ctrl+A</span></p>
+					</li>
+					<li>
+						<p>시간/날짜(D)... <span>F5</span></p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>서식(O)</p>
+				<ul class="subMenu">
 					<li>
 						<p>자동 줄바꿈(W)</p>
 					</li>
 					<li>
 						<p>글꼴(F)...</p>
 					</li>
-				</ul> -->
+				</ul>
 			</li>
-			<li>보기(V)</li>
-			<li>도움말(H)</li>
+			<li>
+				<p>보기(V)</p>
+				<ul class="subMenu">
+					<li>
+						<p>상태 표시줄(S)</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>도움말(H)</p>
+				<ul class="subMenu">
+					<li>
+						<p>도움말 보기(H)</p>
+					</li>
+					<li class="line"></li>
+					<li>
+						<p>메모장 정보(A)</p>
+					</li>
+				</ul>
+			</li>
 		</ul>	
 	</nav>
 	<article>
 	</article>
 </section>
-</body>
 </html>
