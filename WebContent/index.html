@@ -61,7 +61,7 @@ header p  {
 
 .subMenu {
 	border: 1px solid #979797;
-	background: #f0f0f0; 
+	background: #f0f0f0 url(img/line_e2e3e3-fff.png) repeat-y 28px 0; 
 	position: absolute;
 	top: 17px;
 	left: -2px;
@@ -78,14 +78,23 @@ header p  {
 	border: 1px solid #aecff7;
 	border-radius: 3px;
 }
+.subMenu .dbBorder {
+    height: 22px;
+    position: absolute;
+    left: 28px;
+    
+	border-left: 1px solid #e2e3e3;
+	border-right: 1px solid #fff;
+}
 
 .subMenu li p {
 	height: 20px;
 	line-height: 20px;
-	padding: 0 55px 0 33px;
+	margin: 0 55px 0 28px;
+	padding-left: 5px;
 }
 .subMenu.widthShortCut li p {
-	padding-right: 90px;
+	margin-right: 90px;
 }
 
 
@@ -93,7 +102,7 @@ header p  {
 	border-top: 1px solid #e0e0e0;
 	border-bottom: 1px solid #fff;
 	height: 0;
-	margin: 5px 0;
+	margin: 3px 0 3px 27px;
 }
 .subMenu span {
 	position: absolute;
@@ -147,8 +156,12 @@ article {
 			<li>편집(E)</li>
 			<li>서식(O)
 				<!-- <ul class="subMenu">
-					<li>자동 줄바꿈(W)</li>
-					<li>글꼴(F)...</li>
+					<li>
+						<p>자동 줄바꿈(W)</p>
+					</li>
+					<li>
+						<p>글꼴(F)...</p>
+					</li>
 				</ul> -->
 			</li>
 			<li>보기(V)</li>
