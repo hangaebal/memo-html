@@ -40,26 +40,31 @@ header p  {
 }
 
 /* ========== nav ========== */
-#mainMenu {
+nav ul {
 	background: #dee3f3;
 	height: 17px;
 	border: 1px solid #f0f0f0;
 	border-bottom: 1px solid #b6bccc;
 }
-#mainMenu > li {
+.mainMenu {
 	float: left;
 	height: 16px;
 	padding: 0 6px;
 	border: 1px solid transparent;
 	position: relative;
 }
-#mainMenu > li:hover {
+.mainMenu:hover {
 	border: 1px solid #b0b1b1;
 	border-radius: 3px;
 	background: #d8dcea;
 }
 
-.subMenu {
+.mainMenu.selected {
+	border: 1px solid #000;
+	border-radius: 3px;
+}
+
+.mainMenu > ul {
 	border: 1px solid #979797;
 	background: #f0f0f0 url(img/line_e2e3e3-fff.png) repeat-y 28px 0; 
 	position: absolute;
@@ -71,35 +76,22 @@ header p  {
 	display: none;
 }
 
-.displayNone {
-	display: none;
-}
-
-.subMenu li {
+.subMenu {
 	border: 1px solid transparent;
 	
 }
-.subMenu li:hover {
+.subMenu:hover {
 	border: 1px solid #aecff7;
 	border-radius: 3px;
 }
-.subMenu .dbBorder {
-    height: 22px;
-    position: absolute;
-    left: 28px;
-    
-	border-left: 1px solid #e2e3e3;
-	border-right: 1px solid #fff;
-}
 
-
-.subMenu li p {
+.subMenu p {
 	height: 20px;
 	line-height: 20px;
 	margin: 0 55px 0 28px;
 	padding-left: 5px;
 }
-.subMenu.widthShortCut li p {
+.widthShortCut .subMenu p {
 	margin-right: 90px;
 }
 
@@ -131,27 +123,27 @@ article {
 		<p>제목 없음 - 메모장</p>
 	</header>
 	<nav>
-		<ul id="mainMenu">
-			<li>
+		<ul>
+			<li class="mainMenu">
 				<p>파일(F)</p>
 				<ul class="subMenu widthShortCut">
-					<li>
+					<li class="subMenu">
 						<p>새로 만들기(N) <span>Ctrl+N</span></p>
 					</li>
-					<li>
+					<li class="subMenu">
 						<p>열기(O)... <span>Ctrl+O</span></p>
 					</li>
-					<li>
+					<li class="subMenu">
 						<p>저장(S) <span>Ctrl+S</span></p>
 					</li>
-					<li>
+					<li class="subMenu">
 						<p>다른 이름으로 저장(A)...</p>
 					</li>
 					<li class="line"></li>
-					<li>
+					<li class="subMenu">
 						<p>페이지 설정(U)...</p>
 					</li>
-					<li>
+					<li class="subMenu">
 						<p>인쇄(P)... <span>Ctrl+P</span></p>
 					</li>
 					<li class="line"></li>
@@ -160,74 +152,74 @@ article {
 					</li>
 				</ul>
 			</li>
-			<li>
+			<li class="mainMenu">
 				<p>편집(E)</p>
-				<ul class="subMenu widthShortCut">
-					<li>
+				<ul class="widthShortCut">
+					<li class="subMenu">
 						<p>실행 취소(U) <span>Ctrl+Z</span></p>
 					</li>
 					<li class="line"></li>
-					<li>
+					<li class="subMenu">
 						<p>잘라내기(T) <span>Ctrl+X</span></p>
 					</li>
-					<li>
+					<li class="subMenu">
 						<p>복사(C) <span>Ctrl+C</span></p>
 					</li>
-					<li>
+					<li class="subMenu">
 						<p>붙여넣기(P) <span>Ctrl+V</span></p>
 					</li>
-					<li>
+					<li class="subMenu">
 						<p>삭제(L) <span>Del</span></p>
 					</li>
 					<li class="line"></li>
-					<li>
+					<li class="subMenu">
 						<p>찾기(F)... <span>Ctrl+F</span></p>
 					</li>
-					<li>
+					<li class="subMenu">
 						<p>다음 찾기(N) <span>F3</span></p>
 					</li>
-					<li>
+					<li class="subMenu">
 						<p>바꾸기(R)... <span>Ctrl+H</span></p>
 					</li>
-					<li>
+					<li class="subMenu">
 						<p>이동(G)... <span>Ctrl+A</span></p>
 					</li>
 					<li class="line"></li>
-					<li>
+					<li class="subMenu">
 						<p>모두 선택(A) <span>Ctrl+A</span></p>
 					</li>
-					<li>
+					<li class="subMenu">
 						<p>시간/날짜(D)... <span>F5</span></p>
 					</li>
 				</ul>
 			</li>
-			<li>
+			<li class="mainMenu">
 				<p>서식(O)</p>
-				<ul class="subMenu">
-					<li>
+				<ul>
+					<li class="subMenu">
 						<p>자동 줄바꿈(W)</p>
 					</li>
-					<li>
+					<li class="subMenu">
 						<p>글꼴(F)...</p>
 					</li>
 				</ul>
 			</li>
-			<li>
+			<li class="mainMenu">
 				<p>보기(V)</p>
-				<ul class="subMenu">
-					<li>
+				<ul>
+					<li class="subMenu">
 						<p>상태 표시줄(S)</p>
 					</li>
 				</ul>
 			</li>
-			<li>
+			<li class="mainMenu">
 				<p>도움말(H)</p>
-				<ul class="subMenu">
-					<li>
+				<ul>
+					<li class="subMenu">
 						<p>도움말 보기(H)</p>
 					</li>
 					<li class="line"></li>
-					<li>
+					<li class="subMenu">
 						<p>메모장 정보(A)</p>
 					</li>
 				</ul>
@@ -237,4 +229,23 @@ article {
 	<article>
 	</article>
 </section>
+<script type="text/javascript">
+$('body').click(function(e){
+	var $target = $(e.target);
+	
+	$('.subMenu').hide();
+	
+	// <p> 클릭
+	if ($target.parent('li').parent('#mainMenu').length > 0) {
+		$target.siblings('.subMenu').show();
+	}
+	
+	// <li> 클릭
+	if ($target.parent('#mainMenu').length > 0) {
+		$target.children('.subMenu').show();
+	}
+});
+
+</script>
+</body>
 </html>
