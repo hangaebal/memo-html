@@ -40,7 +40,7 @@ header p  {
 }
 
 /* ========== nav ========== */
-nav ul {
+#mainMenuUl {
 	background: #dee3f3;
 	height: 17px;
 	border: 1px solid #f0f0f0;
@@ -64,7 +64,7 @@ nav ul {
 	border-radius: 3px;
 }
 
-.mainMenu > ul {
+.subMenuUl {
 	border: 1px solid #979797;
 	background: #f0f0f0 url(img/line_e2e3e3-fff.png) repeat-y 28px 0; 
 	position: absolute;
@@ -96,7 +96,7 @@ nav ul {
 }
 
 
-.subMenu .line {
+.subMenuUl .line {
 	border-top: 1px solid #e0e0e0;
 	border-bottom: 1px solid #fff;
 	height: 0;
@@ -123,10 +123,10 @@ article {
 		<p>제목 없음 - 메모장</p>
 	</header>
 	<nav>
-		<ul>
+		<ul id="mainMenuUl">
 			<li class="mainMenu">
 				<p>파일(F)</p>
-				<ul class="subMenu widthShortCut">
+				<ul class="subMenuUl widthShortCut">
 					<li class="subMenu">
 						<p>새로 만들기(N) <span>Ctrl+N</span></p>
 					</li>
@@ -147,14 +147,14 @@ article {
 						<p>인쇄(P)... <span>Ctrl+P</span></p>
 					</li>
 					<li class="line"></li>
-					<li>
+					<li class="subMenu">
 						<p>끝내기(X)</p>
 					</li>
 				</ul>
 			</li>
 			<li class="mainMenu">
 				<p>편집(E)</p>
-				<ul class="widthShortCut">
+				<ul class="subMenuUl widthShortCut">
 					<li class="subMenu">
 						<p>실행 취소(U) <span>Ctrl+Z</span></p>
 					</li>
@@ -195,7 +195,7 @@ article {
 			</li>
 			<li class="mainMenu">
 				<p>서식(O)</p>
-				<ul>
+				<ul class="subMenuUl">
 					<li class="subMenu">
 						<p>자동 줄바꿈(W)</p>
 					</li>
@@ -206,7 +206,7 @@ article {
 			</li>
 			<li class="mainMenu">
 				<p>보기(V)</p>
-				<ul>
+				<ul class="subMenuUl">
 					<li class="subMenu">
 						<p>상태 표시줄(S)</p>
 					</li>
@@ -214,7 +214,7 @@ article {
 			</li>
 			<li class="mainMenu">
 				<p>도움말(H)</p>
-				<ul>
+				<ul class="subMenuUl">
 					<li class="subMenu">
 						<p>도움말 보기(H)</p>
 					</li>
@@ -224,27 +224,27 @@ article {
 					</li>
 				</ul>
 			</li>
-		</ul>	
+		</ul>
 	</nav>
 	<article>
 	</article>
 </section>
 <script type="text/javascript">
-$('body').click(function(e){
-	var $target = $(e.target);
+// 메인 메뉴 클릭시 서브 메뉴 오픈
+$('.mainMenu').click(function(e){
+	// body click 으로 전파되는것을 막는다.
+	e.stopPropagation();
 	
-	$('.subMenu').hide();
+	$('.subMenuUl').hide();
+	$(this).children('.subMenuUl').show();
 	
-	// <p> 클릭
-	if ($target.parent('li').parent('#mainMenu').length > 0) {
-		$target.siblings('.subMenu').show();
-	}
-	
-	// <li> 클릭
-	if ($target.parent('#mainMenu').length > 0) {
-		$target.children('.subMenu').show();
-	}
 });
+
+// 열려있는 서브메뉴 닫기
+$('body').click(function(e){
+	$('.subMenuUl').hide();
+});
+
 
 </script>
 </body>
