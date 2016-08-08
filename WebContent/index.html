@@ -60,7 +60,9 @@ header p  {
 }
 
 .mainMenu.selected {
-	border: 1px solid #000;
+	border: 1px solid #4b4d53;
+	border-top-color: #585859;
+	border-bottom-color: #404247;
 	border-radius: 3px;
 }
 
@@ -235,13 +237,20 @@ $('.mainMenu').click(function(e){
 	// body click 으로 전파되는것을 막는다.
 	e.stopPropagation();
 	
+	
+	$('.mainMenu').removeClass('selected');
+	// 선택된 메뉴 보더 진하게
+	$(this).addClass('selected');
+	
 	$('.subMenuUl').hide();
+	// 하위 메뉴 노출
 	$(this).children('.subMenuUl').show();
 	
 });
 
 // 열려있는 서브메뉴 닫기
 $('body').click(function(e){
+	$('.mainMenu').removeClass('selected');
 	$('.subMenuUl').hide();
 });
 
