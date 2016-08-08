@@ -66,6 +66,10 @@ header p  {
 	border-radius: 3px;
 }
 
+.mainMenu.selected .subMenuUl {
+	display: block !important;
+}
+
 .subMenuUl {
 	border: 1px solid #979797;
 	background: #f0f0f0 url(img/line_e2e3e3-fff.png) repeat-y 28px 0; 
@@ -237,21 +241,15 @@ $('.mainMenu').click(function(e){
 	// body click 으로 전파되는것을 막는다.
 	e.stopPropagation();
 	
-	
 	$('.mainMenu').removeClass('selected');
 	// 선택된 메뉴 보더 진하게
-	$(this).addClass('selected');
-	
-	$('.subMenuUl').hide();
 	// 하위 메뉴 노출
-	$(this).children('.subMenuUl').show();
-	
+	$(this).addClass('selected');
 });
 
 // 열려있는 서브메뉴 닫기
 $('body').click(function(e){
 	$('.mainMenu').removeClass('selected');
-	$('.subMenuUl').hide();
 });
 
 
