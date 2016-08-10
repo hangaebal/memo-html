@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>...</title>
 <link rel="stylesheet" href="css/normalize.css">
 <style type="text/css">
 /* ========== body ==========*/
@@ -58,14 +58,12 @@ header p  {
 	border-radius: 3px;
 	background: #d8dcea;
 }
-
 .mainMenu.selected {
 	border: 1px solid #4b4d53;
 	border-top-color: #585859;
 	border-bottom-color: #404247;
 	border-radius: 3px;
 }
-
 .mainMenu.selected .subMenuUl {
 	display: block !important;
 }
@@ -78,10 +76,16 @@ header p  {
 	left: -2px;
 	white-space: nowrap;
 	padding: 2px;
-	
 	box-shadow: 1px 2px 3px #979797;
 	
 	display: none;
+}
+
+.subMenuUl .line {
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #fff;
+	height: 0;
+	margin: 3px 0 3px 27px;
 }
 
 .subMenu {
@@ -103,13 +107,6 @@ header p  {
 	margin-right: 90px;
 }
 
-
-.subMenuUl .line {
-	border-top: 1px solid #e0e0e0;
-	border-bottom: 1px solid #fff;
-	height: 0;
-	margin: 3px 0 3px 27px;
-}
 .subMenu span {
 	position: absolute;
 	right: 20px;
@@ -118,7 +115,6 @@ header p  {
 /* ========== article ========== */
 article { 
 	background: #fff;
-	
 	height: 500px;
 }
 </style>
@@ -253,8 +249,6 @@ $('.mainMenu').click(function(e){
 $('body').click(function(e){
 	$('.mainMenu').removeClass('selected');
 });
-
-
 </script>
 </body>
 </html>
